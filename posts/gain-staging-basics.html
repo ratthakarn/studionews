@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gain Staging คืออะไร และทำไมถึงสำคัญมาก — StudioNews Thailand</title>
+  <meta name="description" content="Gain Staging คือการควบคุมระดับสัญญาณตลอดทั้ง chain ตั้งแต่ mic preamp ไปจนถึง master bus ถ้าทำถูกตั้งแต่แรก ปัญหาเรื่องเสียงแตก เสียงบาง หรือ noise floor จะหายไปเอง" />
+  <meta name="keywords" content="gain staging, การตั้ง gain, signal chain, clipping, noise floor, headroom, DAW mixing, preamp gain, channel fader, home studio" />
+  <meta name="author" content="กองบรรณาธิการ" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://studionews.th/posts/gain-staging-basics" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="th_TH" />
+  <meta property="og:site_name" content="StudioNews Thailand" />
+  <meta property="og:title" content="Gain Staging คืออะไร และทำไมถึงสำคัญมาก" />
+  <meta property="og:description" content="ถ้าเสียงที่ mix ออกมาฟังดูแฟบ บาง หรือ noisy — ปัญหาอาจเริ่มตั้งแต่ gain staging ไม่ถูกต้อง" />
+  <meta property="og:image" content="https://studionews.th/images/posts/gain-staging-basics-hero.jpg" />
+  <meta property="og:url" content="https://studionews.th/posts/gain-staging-basics" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gain Staging คืออะไร และทำไมถึงสำคัญมาก" />
+  <meta name="twitter:description" content="ตั้ง gain ผิดตั้งแต่แรก แก้ตอน mix ไม่ได้ — บทความนี้อธิบายตั้งแต่ต้นจนจบ" />
+  <meta name="twitter:image" content="https://studionews.th/images/posts/gain-staging-basics-hero.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Gain Staging คืออะไร และทำไมถึงสำคัญมาก",
+    "description": "Gain Staging คือการควบคุมระดับสัญญาณตลอดทั้ง chain ตั้งแต่ mic preamp ไปจนถึง master bus",
+    "image": "https://studionews.th/images/posts/gain-staging-basics-hero.jpg",
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13",
+    "author": {"@type": "Organization", "name": "กองบรรณาธิการ StudioNews Thailand"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "StudioNews Thailand",
+      "logo": {"@type": "ImageObject", "url": "https://studionews.th/logo.png"}
+    },
+    "inLanguage": "th",
+    "articleSection": "เทคนิค",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studionews.th/posts/gain-staging-basics"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../post.css" />
+</head>
+<body>
+
+  <div class="top-bar" role="banner">
+    <div class="container top-bar-inner">
+      <span>แหล่งรวมความรู้ดนตรีและโปรดักชั่นอันดับ 1 ของไทย</span>
+      <div class="top-bar-links">
+        <a href="#">สมัครสมาชิก</a>
+        <a href="#">จดหมายข่าว</a>
+        <a href="#">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="StudioNews Thailand">
+        <span class="logo-main">STUDIO</span><span class="logo-accent">NEWS</span>
+        <span class="logo-th">ไทยแลนด์</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="เมนูหลัก">
+        <a href="#">รีวิว</a>
+        <a href="#">เทคนิค</a>
+        <a href="#">บุคคล</a>
+        <a href="#">ฟอรัม</a>
+        <a href="#">เกียร์</a>
+        <a href="#">ข่าว</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post-main" id="main-content" role="main">
+    <div class="container post-container">
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="../index.html">หน้าแรก</a>
+        <span>›</span>
+        <a href="#">เทคนิค</a>
+        <span>›</span>
+        <span>Gain Staging คืออะไร</span>
+      </nav>
+
+      <article class="post-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <header class="post-header">
+          <span class="tag tag-orange">เทคนิค</span>
+          <h1 itemprop="headline">Gain Staging คืออะไร และทำไมถึงสำคัญมากกว่าที่คิด</h1>
+          <div class="post-meta">
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+              โดย <span itemprop="name">กองบรรณาธิการ</span>
+            </span>
+            <span class="dot">·</span>
+            <time itemprop="datePublished" datetime="2026-06-13">13 มิ.ย. 2569</time>
+            <span class="dot">·</span>
+            <span>6 นาทีในการอ่าน</span>
+          </div>
+          <img src="../images/posts/gainstage.png"
+               alt="หน้าจอ DAW แสดง channel fader และ gain knob ในการ mix"
+               class="post-hero-img"
+               itemprop="image"
+               loading="eager" />
+        </header>
+
+        <div class="post-body" itemprop="articleBody">
+
+          <p>มีคนถามบ่อยมากว่าทำไม mix ถึงฟังดูไม่สะอาด เสียงแข็ง หรือ plugin ที่ใช้ถึงให้ผลลัพธ์ต่างจากที่เห็นใน tutorial ทั้งที่ใช้ตัวเดียวกัน ส่วนใหญ่ปัญหาไม่ได้อยู่ที่ plugin หรืออุปกรณ์ — แต่อยู่ที่ gain staging ที่ทำมาตั้งแต่ต้น</p>
+
+          <p>Gain Staging คือการดูแลระดับสัญญาณตลอดทั้ง signal chain ตั้งแต่ที่ mic รับเสียง ผ่าน preamp, audio interface, ลงใน DAW, ผ่าน plugin ทุกตัว จนถึง master bus หลักการง่ายๆ คือสัญญาณต้องไม่แรงเกินจน clip (เสียงแตก) และต้องไม่เบาเกินจน noise floor กลายเป็นปัญหา</p>
+
+          <figure class="comp-diagram-wrap">
+            <img src="../images/posts/gainstage.png"
+                 alt="Gain Stage — ระดับสัญญาณในแต่ละจุดของ signal chain"
+                 style="width:100%;max-width:680px;display:block;margin:0 auto;border-radius:6px;" />
+          </figure>
+
+          <!-- Diagram 1: Signal Chain Overview -->
+          <figure class="comp-diagram-wrap" aria-label="Gain staging signal chain from mic to master bus">
+            <svg viewBox="0 0 680 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+              <rect width="680" height="130" fill="#1a1a2e" rx="8"/>
+              <text x="340" y="20" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="12" fill="#e8a838" font-weight="700">SIGNAL CHAIN — ระดับที่ควรเป็นในแต่ละจุด</text>
+              <defs>
+                <marker id="ags" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#aaa"/></marker>
+              </defs>
+
+              <!-- Stage blocks -->
+              <!-- Mic -->
+              <rect x="10" y="38" width="72" height="50" rx="5" fill="#0d1117" stroke="#555" stroke-width="1.2"/>
+              <text x="46" y="56" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">🎙</text>
+              <text x="46" y="68" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#fff" font-weight="700">MIC</text>
+              <text x="46" y="80" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#666">source</text>
+              <line x1="82" y1="63" x2="96" y2="63" stroke="#aaa" stroke-width="1.2" marker-end="url(#ags)"/>
+
+              <!-- Preamp -->
+              <rect x="98" y="38" width="80" height="50" rx="5" fill="#0d2010" stroke="#81c784" stroke-width="1.5"/>
+              <text x="138" y="54" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784" font-weight="700">PREAMP</text>
+              <text x="138" y="66" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">Gain Knob</text>
+              <text x="138" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838" font-weight="700">−18 dBFS</text>
+              <line x1="178" y1="63" x2="192" y2="63" stroke="#aaa" stroke-width="1.2" marker-end="url(#ags)"/>
+
+              <!-- Interface/ADC -->
+              <rect x="194" y="38" width="80" height="50" rx="5" fill="#0d1117" stroke="#4fc3f7" stroke-width="1.2"/>
+              <text x="234" y="54" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#4fc3f7" font-weight="700">INTERFACE</text>
+              <text x="234" y="66" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">ADC</text>
+              <text x="234" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838">peak &lt; −12</text>
+              <line x1="274" y1="63" x2="288" y2="63" stroke="#aaa" stroke-width="1.2" marker-end="url(#ags)"/>
+
+              <!-- DAW Track -->
+              <rect x="290" y="38" width="80" height="50" rx="5" fill="#100d1f" stroke="#9c27b0" stroke-width="1.2"/>
+              <text x="330" y="54" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#ce93d8" font-weight="700">DAW TRACK</text>
+              <text x="330" y="66" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">Clip Gain</text>
+              <text x="330" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838">−18 RMS</text>
+              <line x1="370" y1="63" x2="384" y2="63" stroke="#aaa" stroke-width="1.2" marker-end="url(#ags)"/>
+
+              <!-- Plugin Chain -->
+              <rect x="386" y="38" width="90" height="50" rx="5" fill="#1a1000" stroke="#ffb74d" stroke-width="1.2"/>
+              <text x="431" y="54" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#ffb74d" font-weight="700">PLUGINS</text>
+              <text x="431" y="66" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">EQ·Comp·FX</text>
+              <text x="431" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838">match in=out</text>
+              <line x1="476" y1="63" x2="490" y2="63" stroke="#aaa" stroke-width="1.2" marker-end="url(#ags)"/>
+
+              <!-- Master Bus -->
+              <rect x="492" y="38" width="90" height="50" rx="5" fill="#1a0505" stroke="#ef5350" stroke-width="1.5"/>
+              <text x="537" y="54" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#ef5350" font-weight="700">MASTER BUS</text>
+              <text x="537" y="66" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">Final Output</text>
+              <text x="537" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838">peak −6 to −3</text>
+              <line x1="582" y1="63" x2="596" y2="63" stroke="#aaa" stroke-width="1.2" marker-end="url(#ags)"/>
+
+              <!-- Export -->
+              <rect x="598" y="45" width="68" height="36" rx="5" fill="#1a3060" stroke="#4fc3f7" stroke-width="1.2"/>
+              <text x="632" y="60" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#4fc3f7" font-weight="700">EXPORT</text>
+              <text x="632" y="73" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">WAV/MP3</text>
+
+              <!-- Bottom labels -->
+              <text x="340" y="112" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#555">ทุกจุดใน chain มีผลต่อคุณภาพเสียงที่ตามมา — ควบคุมระดับให้ถูกต้องตั้งแต่ Preamp</text>
+            </svg>
+            <figcaption class="comp-caption">Signal chain ตั้งแต่ Mic ถึง Export — ระดับที่แนะนำแต่ละจุด ควบคุมด้วย Gain ไม่ใช่ Fader</figcaption>
+          </figure>
+
+          <h2>เริ่มจาก Source — ตั้ง Preamp Gain ให้ถูก</h2>
+          <p>จุดแรกที่ gain staging เริ่มต้นคือ preamp ของ interface เป้าหมายคือให้สัญญาณอยู่ในช่วงที่แรงพอจะได้ dynamic range ดีจาก ADC แต่ไม่แรงจน clip ค่าที่แนะนำโดยทั่วไปคือให้ peak ของสัญญาณอยู่แถว −18 dBFS ถึง −12 dBFS สำหรับงานพูดหรือร้อง ส่วนกลองหรือ transient แรงๆ อาจต้องให้ headroom เยอะกว่านี้ ถ้าเห็น meter แดงบ่อยระหว่างบันทึก แปลว่า preamp gain สูงเกินไปแล้ว</p>
+
+          <!-- Diagram 2: Gain Knob Visual -->
+          <figure class="comp-diagram-wrap" aria-label="Preamp gain knob zones">
+            <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+              <rect width="680" height="200" fill="#1a1a2e" rx="8"/>
+              <text x="340" y="22" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="12" fill="#e8a838" font-weight="700">PREAMP GAIN KNOB — โซนระดับเสียง</text>
+
+              <!-- Knob base -->
+              <circle cx="200" cy="115" r="52" fill="#111" stroke="#333" stroke-width="2"/>
+              <circle cx="200" cy="115" r="44" fill="#1c1c1c" stroke="#444" stroke-width="1.5"/>
+
+              <!-- Arc: Too quiet (grey) -->
+              <path d="M 160,152 A 52,52 0 0,1 148,115" fill="none" stroke="#555" stroke-width="10" stroke-linecap="round"/>
+              <!-- Arc: Sweet spot (green) -->
+              <path d="M 148,115 A 52,52 0 0,1 175,68" fill="none" stroke="#2e7d32" stroke-width="10" stroke-linecap="round"/>
+              <!-- Arc: Getting loud (yellow) -->
+              <path d="M 175,68 A 52,52 0 0,1 225,68" fill="none" stroke="#f9a825" stroke-width="10" stroke-linecap="round"/>
+              <!-- Arc: Clipping (red) -->
+              <path d="M 225,68 A 52,52 0 0,1 252,115" fill="none" stroke="#c62828" stroke-width="10" stroke-linecap="round"/>
+              <!-- Bottom gap -->
+              <path d="M 252,115 A 52,52 0 0,1 240,152" fill="none" stroke="#c62828" stroke-width="10" stroke-linecap="round"/>
+
+              <!-- Knob tick / needle (pointing to sweet spot ~8 o'clock from center = good level) -->
+              <!-- needle pointing ~11 o'clock = good gain -->
+              <line x1="200" y1="115" x2="172" y2="73" stroke="#e8a838" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="200" cy="115" r="6" fill="#e8a838"/>
+              <!-- Knob label -->
+              <text x="200" y="107" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#888">GAIN</text>
+
+              <!-- Zone labels -->
+              <text x="125" y="165" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#666">เบาเกิน</text>
+              <text x="125" y="176" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#555">(noise floor)</text>
+              <text x="148" y="80" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784" font-weight="700">SWEET SPOT</text>
+              <text x="148" y="91" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">−18 ถึง −12 dBFS</text>
+              <text x="252" y="80" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#ffb74d">สูงเกิน</text>
+              <text x="275" y="155" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#ef5350" font-weight="700">CLIP !</text>
+              <text x="275" y="167" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#ef5350">เสียงแตก</text>
+
+              <!-- Right side: Level meter bar -->
+              <text x="440" y="42" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="11" fill="#fff" font-weight="700">Input Level Meter</text>
+              <rect x="400" y="52" width="80" height="130" rx="4" fill="#0d1117" stroke="#333"/>
+
+              <!-- Meter fill zones -->
+              <!-- Noise floor (bottom) -->
+              <rect x="402" y="152" width="76" height="28" rx="2" fill="#222"/>
+              <text x="440" y="170" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#555">Noise Floor</text>
+              <!-- Good zone green -->
+              <rect x="402" y="92" width="76" height="58" rx="2" fill="#1b5e20"/>
+              <text x="440" y="118" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784" font-weight="700">−18 dBFS</text>
+              <text x="440" y="130" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">← TARGET</text>
+              <!-- Yellow caution -->
+              <rect x="402" y="72" width="76" height="18" rx="2" fill="#f57f17"/>
+              <text x="440" y="84" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#fff">−12 dBFS</text>
+              <!-- Red clip zone -->
+              <rect x="402" y="54" width="76" height="16" rx="2" fill="#b71c1c"/>
+              <text x="440" y="65" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#fff">CLIP → 0 dBFS</text>
+
+              <!-- Scale ticks right side -->
+              <text x="490" y="58" font-family="Sarabun,sans-serif" font-size="8" fill="#ef5350">0</text>
+              <text x="490" y="76" font-family="Sarabun,sans-serif" font-size="8" fill="#ffb74d">−6</text>
+              <text x="490" y="96" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">−12</text>
+              <text x="490" y="122" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">−18 ★</text>
+              <text x="490" y="155" font-family="Sarabun,sans-serif" font-size="8" fill="#555">−36</text>
+              <text x="486" y="175" font-family="Sarabun,sans-serif" font-size="8" fill="#444">dBFS</text>
+            </svg>
+            <figcaption class="comp-caption">Gain Knob และ Level Meter — sweet spot อยู่ที่ −18 dBFS เพียงพอสำหรับ dynamic range ที่ดี โดยไม่เสี่ยง clip</figcaption>
+          </figure>
+
+          <h2>ใน DAW — Channel Fader ไม่ใช่ Volume Knob</h2>
+          <p>ความเข้าใจผิดที่พบบ่อยคือการใช้ channel fader ดึงขึ้นดึงลงแทนการปรับ gain จริงๆ channel fader ควรอยู่แถว 0 dB (unity gain) เสมอ แล้วใช้ clip gain หรือ input gain ใน DAW ปรับระดับของ track แต่ละตัวให้อยู่ในระดับที่เหมาะสมก่อน ประมาณ −18 dBFS RMS เมื่อทุก track อยู่ในระดับที่ถูก fader จะทำหน้าที่ balance ระหว่าง element ต่างๆ แทนที่จะต้องวิ่งหา headroom</p>
+
+          <h2>Plugin Chain — ระวัง Gain ที่สะสมทีละนิด</h2>
+          <p>ทุกครั้งที่ใส่ plugin ใหม่ใน chain ให้ตรวจดูว่า output level ของ plugin นั้นใกล้เคียงกับ input level หรือเปล่า EQ ที่ boost บางความถี่, compressor ที่ make-up gain สูง, หรือ saturation plugin ที่เพิ่มระดับโดยไม่รู้ตัว — พวกนี้สะสมกันได้เร็วมาก</p>
+
+          <!-- Diagram 3: Plugin gain accumulation -->
+          <figure class="comp-diagram-wrap" aria-label="Plugin chain gain accumulation problem">
+            <svg viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+              <rect width="680" height="160" fill="#1a1a2e" rx="8"/>
+              <text x="340" y="20" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="12" fill="#e8a838" font-weight="700">PLUGIN CHAIN — Gain สะสมในแต่ละ Plugin</text>
+
+              <!-- dBFS axis (top = 0 dBFS, bottom = -24 dBFS) -->
+              <!-- Each plugin shown as a bar + delta -->
+
+              <!-- Input level bar -->
+              <text x="60" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">Input</text>
+              <rect x="20" y="44" width="80" height="80" rx="3" fill="#1b5e20"/>
+              <text x="60" y="90" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="10" fill="#fff" font-weight="700">−18</text>
+              <text x="60" y="102" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">dBFS RMS</text>
+              <line x1="100" y1="90" x2="118" y2="90" stroke="#aaa" stroke-width="1.5" marker-end="url(#ags)"/>
+
+              <!-- EQ +4dB -->
+              <text x="160" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">EQ</text>
+              <rect x="120" y="44" width="80" height="67" rx="3" fill="#1b5e20"/>
+              <rect x="120" y="44" width="80" height="13" rx="3" fill="#f57f17"/>
+              <text x="160" y="82" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="10" fill="#fff" font-weight="700">−14</text>
+              <text x="160" y="38" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#ffb74d">+4 dB boost</text>
+              <line x1="200" y1="83" x2="218" y2="83" stroke="#aaa" stroke-width="1.5" marker-end="url(#ags)"/>
+
+              <!-- Compressor +3 make-up gain -->
+              <text x="260" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">Compressor</text>
+              <rect x="220" y="44" width="80" height="57" rx="3" fill="#1b5e20"/>
+              <rect x="220" y="44" width="80" height="23" rx="3" fill="#f57f17"/>
+              <text x="260" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="10" fill="#fff" font-weight="700">−11</text>
+              <text x="260" y="38" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#ffb74d">+3 make-up</text>
+              <line x1="300" y1="75" x2="318" y2="75" stroke="#aaa" stroke-width="1.5" marker-end="url(#ags)"/>
+
+              <!-- Saturation +2 -->
+              <text x="360" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">Saturation</text>
+              <rect x="320" y="44" width="80" height="47" rx="3" fill="#b71c1c"/>
+              <rect x="320" y="44" width="80" height="33" rx="3" fill="#f57f17"/>
+              <text x="360" y="72" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="10" fill="#fff" font-weight="700">−9</text>
+              <text x="360" y="38" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#ef5350">+2 harmonic add</text>
+              <line x1="400" y1="67" x2="418" y2="67" stroke="#aaa" stroke-width="1.5" marker-end="url(#ags)"/>
+
+              <!-- Result = Clipping! -->
+              <text x="480" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#ef5350" font-weight="700">OUTPUT !</text>
+              <rect x="440" y="44" width="80" height="35" rx="3" fill="#b71c1c"/>
+              <rect x="440" y="32" width="80" height="12" rx="3" fill="#ef5350"/>
+              <text x="480" y="59" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#fff" font-weight="700">CLIP!</text>
+              <text x="480" y="28" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#fff">−18+9 = −9?</text>
+
+              <!-- Clip indicator line -->
+              <line x1="20" y1="44" x2="660" y2="44" stroke="#ef5350" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+              <text x="655" y="40" text-anchor="end" font-family="Sarabun,sans-serif" font-size="8" fill="#ef5350">0 dBFS</text>
+
+              <!-- Fix label -->
+              <rect x="560" y="55" width="108" height="65" rx="5" fill="#0d2010" stroke="#81c784" stroke-width="1.2"/>
+              <text x="614" y="72" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784" font-weight="700">แก้ได้โดย:</text>
+              <text x="614" y="85" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">ลด gain แต่ละ plugin</text>
+              <text x="614" y="97" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">ให้ Output = Input</text>
+              <text x="614" y="109" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#e8a838">Level Match !</text>
+            </svg>
+            <figcaption class="comp-caption">Gain สะสมทีละนิดในแต่ละ plugin — EQ boost +4, make-up +3, saturation +2 = ระดับพุ่งขึ้น 9 dB โดยไม่รู้ตัว แก้ด้วยการ level-match output ของทุก plugin</figcaption>
+          </figure>
+
+          <h2>Master Bus — ต้องมี Headroom เหลือ</h2>
+          <p>ก่อนจะ master หรือส่งงานให้ mastering engineer master bus ควรมี headroom เหลืออยู่ ไม่ใช่ peak ที่ 0 dBFS พอดี ค่าที่แนะนำคือให้ peak อยู่แถว −6 dBFS ถึง −3 dBFS ถ้า master bus ของคุณ peak ที่ 0 อยู่แล้ว แปลว่า gain staging ตลอด chain อาจสูงเกินไป และ mastering engineer จะมีพื้นที่น้อยมากในการทำงาน</p>
+
+          <!-- Diagram 4: Master Bus Headroom -->
+          <figure class="comp-diagram-wrap" aria-label="Master bus headroom diagram">
+            <svg viewBox="0 0 680 175" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+              <rect width="680" height="175" fill="#1a1a2e" rx="8"/>
+              <text x="340" y="20" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="12" fill="#e8a838" font-weight="700">MASTER BUS — Headroom และ Target Level</text>
+
+              <!-- Left: BAD mix -->
+              <text x="175" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="11" fill="#ef5350" font-weight="700">✕ ผิด — ไม่มี headroom</text>
+              <!-- Meter -->
+              <rect x="100" y="48" width="50" height="110" rx="3" fill="#111" stroke="#333"/>
+              <!-- Full red clip -->
+              <rect x="102" y="50" width="46" height="16" rx="2" fill="#b71c1c"/>
+              <text x="125" y="62" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#fff">CLIP</text>
+              <rect x="102" y="68" width="46" height="18" rx="2" fill="#ef5350"/>
+              <rect x="102" y="88" width="46" height="68" rx="2" fill="#c62828"/>
+              <text x="125" y="130" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#fff" font-weight="700">0 dBFS</text>
+              <!-- Scale -->
+              <text x="157" y="52" font-family="Sarabun,sans-serif" font-size="8" fill="#ef5350">0</text>
+              <text x="157" y="72" font-family="Sarabun,sans-serif" font-size="8" fill="#ef5350">−3</text>
+              <text x="157" y="92" font-family="Sarabun,sans-serif" font-size="8" fill="#ffb74d">−6</text>
+              <text x="157" y="130" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">−18</text>
+              <text x="175" y="168" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#555">mastering engineer ทำอะไรไม่ได้</text>
+
+              <!-- Divider -->
+              <line x1="340" y1="35" x2="340" y2="165" stroke="#333" stroke-width="1" stroke-dasharray="5,4"/>
+
+              <!-- Right: GOOD mix -->
+              <text x="505" y="40" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="11" fill="#81c784" font-weight="700">✓ ถูก — มี headroom</text>
+              <rect x="430" y="48" width="50" height="110" rx="3" fill="#111" stroke="#333"/>
+              <!-- Headroom zone -->
+              <rect x="432" y="50" width="46" height="40" rx="2" fill="#0d2010" stroke="#1b5e20" stroke-width="1" stroke-dasharray="3,2"/>
+              <text x="455" y="64" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#2e7d32">HEADROOM</text>
+              <text x="455" y="75" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#555">6 dB ว่าง</text>
+              <!-- Good level -->
+              <rect x="432" y="91" width="46" height="65" rx="2" fill="#1b5e20"/>
+              <text x="455" y="130" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#fff" font-weight="700">−6 dBFS</text>
+              <text x="455" y="142" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">peak target</text>
+              <!-- Scale -->
+              <text x="487" y="52" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">0</text>
+              <text x="487" y="72" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">−3</text>
+              <text x="487" y="93" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">−6 ★</text>
+              <text x="487" y="130" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">−18</text>
+              <text x="505" y="168" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784">มีพื้นที่ให้ mastering ทำงาน</text>
+            </svg>
+            <figcaption class="comp-caption">Master bus ที่ดีต้องมี headroom เหลือ — peak ที่ −6 dBFS ก่อน export เปิดพื้นที่ให้ mastering engineer ทำงานได้เต็มที่</figcaption>
+          </figure>
+
+          <h2>VU Meter — เครื่องมือ reference ระดับ analog ที่ยังใช้อยู่ถึงทุกวันนี้</h2>
+          <p>VU Meter (Volume Unit Meter) ถูกกำหนดมาตรฐานตั้งแต่ปี 1939 โดย Bell Labs และ broadcast industry ของอเมริกา มันไม่วัด peak เหมือน meter ดิจิทัลทั่วไป แต่วัดระดับ RMS เฉลี่ยของสัญญาณ ซึ่งใกล้เคียงกับสิ่งที่หูมนุษย์ได้ยินมากกว่า "0 VU" บน VU Meter คือจุด reference ที่เทียบเท่า +4 dBu ในระบบ professional analog ซึ่งในโลก digital สมัยใหม่เราสมมติกันว่า 0 VU ≈ −18 dBFS</p>
+
+          <!-- Diagram 5: VU Meter (analog arc style) -->
+          <figure class="comp-diagram-wrap" aria-label="Classic VU Meter analog display">
+            <svg viewBox="0 0 680 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+              <rect width="680" height="270" fill="#2a2010" rx="10"/>
+              <!-- VU Meter bezel -->
+              <rect x="130" y="25" width="420" height="225" rx="12" fill="#1a1400" stroke="#8B6914" stroke-width="3"/>
+              <rect x="140" y="35" width="400" height="200" rx="8" fill="#f5f0d8"/>
+
+              <!-- Meter label -->
+              <text x="340" y="62" text-anchor="middle" font-family="serif" font-size="18" fill="#222" font-weight="700" letter-spacing="6">VU</text>
+              <text x="340" y="76" text-anchor="middle" font-family="serif" font-size="9" fill="#555" letter-spacing="2">VOLUME UNIT</text>
+
+              <!-- Scale arc background -->
+              <!-- Arc from -20 VU to +3 VU, centered at 340,195, radius 130 -->
+              <!-- Full arc background -->
+              <path d="M 196,195 A 144,144 0 0,1 484,195" fill="none" stroke="#e8e0c0" stroke-width="22" stroke-linecap="butt"/>
+
+              <!-- Green zone: -20 to -7 VU -->
+              <path d="M 196,195 A 144,144 0 0,1 316,76" fill="none" stroke="#4caf50" stroke-width="22" stroke-linecap="butt" opacity="0.7"/>
+              <!-- Yellow zone: -7 to 0 VU -->
+              <path d="M 316,76 A 144,144 0 0,1 406,78" fill="none" stroke="#ffc107" stroke-width="22" stroke-linecap="butt" opacity="0.85"/>
+              <!-- Red zone: 0 to +3 VU -->
+              <path d="M 406,78 A 144,144 0 0,1 484,195" fill="none" stroke="#f44336" stroke-width="22" stroke-linecap="butt" opacity="0.9"/>
+
+              <!-- Scale tick marks and labels (outside arc) -->
+              <!-- -20 VU -->
+              <line x1="198" y1="196" x2="211" y2="185" stroke="#333" stroke-width="1.5"/>
+              <text x="188" y="210" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="9" fill="#333">-20</text>
+              <!-- -10 VU -->
+              <line x1="250" y1="105" x2="260" y2="116" stroke="#333" stroke-width="1.5"/>
+              <text x="238" y="98" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="9" fill="#333">-10</text>
+              <!-- -7 VU -->
+              <line x1="296" y1="76" x2="305" y2="89" stroke="#333" stroke-width="1.5"/>
+              <text x="290" y="68" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="9" fill="#333">-7</text>
+              <!-- -3 VU -->
+              <line x1="357" y1="59" x2="360" y2="73" stroke="#333" stroke-width="1.5"/>
+              <text x="360" y="52" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="9" fill="#333">-3</text>
+              <!-- 0 VU -->
+              <line x1="406" y1="64" x2="402" y2="78" stroke="#333" stroke-width="2"/>
+              <text x="416" y="57" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="11" fill="#c62828" font-weight="700">0</text>
+              <!-- +3 VU -->
+              <line x1="451" y1="100" x2="443" y2="112" stroke="#333" stroke-width="1.5"/>
+              <text x="462" y="94" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="9" fill="#c62828">+3</text>
+              <!-- +2 minor tick -->
+              <line x1="484" y1="196" x2="471" y2="186" stroke="#333" stroke-width="1.5"/>
+              <text x="497" y="208" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="8" fill="#c62828">+3</text>
+
+              <!-- Needle pivot -->
+              <circle cx="340" cy="195" r="10" fill="#555" stroke="#333" stroke-width="1.5"/>
+              <!-- Needle pointing at 0 VU (≈ -18 dBFS in digital) -->
+              <!-- 0 VU is at about 70° from left baseline (center = 180°, 0 VU arc ~70° from right end) -->
+              <!-- Needle at 0 VU: angle from vertical = about 30° to right -->
+              <line x1="340" y1="195" x2="400" y2="72" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="340" cy="195" r="5" fill="#222"/>
+
+              <!-- Bottom labels -->
+              <text x="240" y="218" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#2e7d32" font-weight="700">ปลอดภัย</text>
+              <text x="340" y="218" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e65100">ระวัง</text>
+              <text x="445" y="218" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#c62828" font-weight="700">OVER</text>
+              <text x="340" y="232" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="10" fill="#555">เข็มชี้ที่ 0 VU = −18 dBFS (digital reference)</text>
+
+              <!-- Side annotation -->
+              <rect x="545" y="50" width="120" height="155" rx="6" fill="#1a1400" stroke="#8B6914" stroke-width="1"/>
+              <text x="605" y="68" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838" font-weight="700">VU Reference</text>
+              <text x="605" y="84" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">0 VU = +4 dBu</text>
+              <text x="605" y="96" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">(analog pro level)</text>
+              <line x1="555" y1="105" x2="655" y2="105" stroke="#333" stroke-width="1"/>
+              <text x="605" y="118" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#e8a838" font-weight="700">ในโลก Digital:</text>
+              <text x="605" y="131" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">0 VU ≈ −18 dBFS</text>
+              <text x="605" y="143" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">(ค่า convention)</text>
+              <line x1="555" y1="152" x2="655" y2="152" stroke="#333" stroke-width="1"/>
+              <text x="605" y="165" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">วัดแบบ RMS</text>
+              <text x="605" y="177" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">ใกล้เคียงกับ</text>
+              <text x="605" y="189" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">การได้ยินของหู</text>
+            </svg>
+            <figcaption class="comp-caption">VU Meter แบบ analog — เข็มที่ 0 VU คือ reference level เทียบเท่า −18 dBFS ในระบบ digital / วัดแบบ RMS ทำให้สอดคล้องกับ loudness ที่หูได้ยิน</figcaption>
+          </figure>
+
+          <p>จุดสำคัญของ VU Meter คือ ballistics — การที่เข็มไม่กระโดดตามทุก transient แต่ตอบสนองแบบ "เฉลี่ย" (integration time ~300ms) ทำให้ mix engineer อ่านค่าได้สบายตาและสัมพันธ์กับความดังที่รับรู้จริงมากกว่า ถ้า average ของเพลงอยู่ที่ 0 VU ส่วน peak อาจขึ้นไปถึง +6 VU หรือมากกว่าได้ในช่วงสั้นๆ โดยยังไม่ clip ในระบบ analog</p>
+
+          <h2>เปรียบเทียบ Meter ทั้ง 3 ระบบ — dBFS, LUFS และ K-System</h2>
+          <p>ในโลก digital audio มี meter อยู่หลายระบบที่ใช้วัดคนละสิ่งกัน engineer ที่ดีต้องรู้ว่าแต่ละตัวบอกอะไร และใช้ในสถานการณ์ไหน</p>
+
+          <!-- Diagram 6: Three Meters Comparison -->
+          <figure class="comp-diagram-wrap" aria-label="dBFS vs LUFS vs K-System meter comparison">
+            <svg viewBox="0 0 680 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+              <rect width="680" height="310" fill="#1a1a2e" rx="10"/>
+              <text x="340" y="22" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="13" fill="#e8a838" font-weight="700">METER ทั้ง 3 ระบบ เปรียบเทียบเคียงข้างกัน</text>
+
+              <!-- Column headers -->
+              <text x="120" y="44" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="11" fill="#4fc3f7" font-weight="700">dBFS (Peak)</text>
+              <text x="120" y="56" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">Digital Full Scale</text>
+
+              <text x="340" y="44" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="11" fill="#81c784" font-weight="700">LUFS / Loudness</text>
+              <text x="340" y="56" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">Loudness Unit Full Scale</text>
+
+              <text x="560" y="44" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="11" fill="#e8a838" font-weight="700">K-System (Bob Katz)</text>
+              <text x="560" y="56" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#aaa">K-20 / K-14 / K-12</text>
+
+              <!-- === dBFS Meter === -->
+              <rect x="70" y="65" width="100" height="180" rx="4" fill="#0d1117" stroke="#4fc3f7" stroke-width="1.5"/>
+              <!-- 0 dBFS clip line -->
+              <rect x="72" y="67" width="96" height="14" rx="2" fill="#b71c1c"/>
+              <text x="120" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#fff" font-weight="700">CLIP → 0 dBFS</text>
+              <!-- -3 zone -->
+              <rect x="72" y="83" width="96" height="18" rx="2" fill="#e65100"/>
+              <text x="120" y="95" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#fff">−3 dBFS</text>
+              <!-- -6 zone -->
+              <rect x="72" y="103" width="96" height="22" rx="2" fill="#f57f17"/>
+              <text x="120" y="118" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#fff">−6 dBFS (master peak)</text>
+              <!-- good zone -->
+              <rect x="72" y="127" width="96" height="50" rx="2" fill="#1b5e20"/>
+              <text x="120" y="148" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784" font-weight="700">−18 dBFS</text>
+              <text x="120" y="160" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">= 0 VU reference</text>
+              <text x="120" y="171" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">sweet spot</text>
+              <!-- lower zone -->
+              <rect x="72" y="179" width="96" height="64" rx="2" fill="#111"/>
+              <text x="120" y="215" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#555">−36 dBFS</text>
+              <text x="120" y="230" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#444">noise floor</text>
+
+              <!-- Description below -->
+              <text x="120" y="258" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#4fc3f7">วัด peak instantaneous</text>
+              <text x="120" y="269" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">ป้องกัน digital clipping</text>
+              <text x="120" y="280" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">ใช้ทุก DAW</text>
+              <text x="120" y="296" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#4fc3f7" font-weight="700">ใช้ระหว่าง recording</text>
+
+              <!-- === LUFS Meter === -->
+              <rect x="290" y="65" width="100" height="180" rx="4" fill="#0d1117" stroke="#81c784" stroke-width="1.5"/>
+              <!-- Streaming targets -->
+              <rect x="292" y="67" width="96" height="20" rx="2" fill="#333"/>
+              <text x="340" y="80" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#888">Too Loud → ถูก normalize</text>
+              <!-- Spotify target zone -->
+              <rect x="292" y="89" width="96" height="22" rx="2" fill="#1a3a1a"/>
+              <text x="340" y="100" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784" font-weight="700">Spotify −14 LUFS</text>
+              <text x="340" y="109" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#aaa">Apple Music −16 LUFS</text>
+              <!-- YouTube target -->
+              <rect x="292" y="113" width="96" height="20" rx="2" fill="#1a2a1a"/>
+              <text x="340" y="122" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">YouTube −14 LUFS</text>
+              <text x="340" y="132" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#aaa">Tidal −14 LUFS</text>
+              <!-- Broadcast -->
+              <rect x="292" y="135" width="96" height="20" rx="2" fill="#112211"/>
+              <text x="340" y="145" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#4fc3f7">Broadcast −23 LUFS</text>
+              <text x="340" y="155" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#aaa">(EBU R128)</text>
+              <!-- Lower -->
+              <rect x="292" y="157" width="96" height="86" rx="2" fill="#111"/>
+              <text x="340" y="195" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#444">− Quiet −</text>
+
+              <!-- Types of LUFS -->
+              <text x="340" y="258" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#81c784">Integrated / Short-term</text>
+              <text x="340" y="269" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">Momentary LUFS</text>
+              <text x="340" y="280" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">วัดความดัง "ที่ได้ยินจริง"</text>
+              <text x="340" y="296" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#81c784" font-weight="700">ใช้ mastering / streaming</text>
+
+              <!-- === K-System Meter === -->
+              <rect x="510" y="65" width="100" height="180" rx="4" fill="#0d1117" stroke="#e8a838" stroke-width="1.5"/>
+              <!-- K-System has 0 at different points -->
+              <!-- K-20: 0 at -20 dBFS (most headroom, film/classical) -->
+              <!-- K-14: 0 at -14 dBFS (music albums) -->
+              <!-- K-12: 0 at -12 dBFS (broadcast) -->
+
+              <!-- K-20 zone -->
+              <rect x="512" y="67" width="30" height="176" rx="2" fill="#111"/>
+              <rect x="512" y="87" width="30" height="30" rx="2" fill="#1b5e20"/>
+              <text x="527" y="107" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#81c784" font-weight="700">0</text>
+              <rect x="512" y="67" width="30" height="18" rx="2" fill="#333"/>
+              <text x="527" y="78" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#666">+20</text>
+              <text x="527" y="242" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#aaa" transform="rotate(-90,527,242)">K-20</text>
+
+              <!-- K-14 zone -->
+              <rect x="546" y="67" width="30" height="176" rx="2" fill="#111"/>
+              <rect x="546" y="107" width="30" height="30" rx="2" fill="#1b4a20"/>
+              <text x="561" y="127" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#e8a838" font-weight="700">0</text>
+              <rect x="546" y="67" width="30" height="38" rx="2" fill="#333"/>
+              <text x="561" y="88" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#666">+14</text>
+              <text x="561" y="242" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#aaa" transform="rotate(-90,561,242)">K-14 ★</text>
+
+              <!-- K-12 zone -->
+              <rect x="580" y="67" width="28" height="176" rx="2" fill="#111"/>
+              <rect x="580" y="117" width="28" height="30" rx="2" fill="#1a3010"/>
+              <text x="594" y="137" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#ffb74d" font-weight="700">0</text>
+              <rect x="580" y="67" width="28" height="48" rx="2" fill="#333"/>
+              <text x="594" y="93" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#666">+12</text>
+              <text x="594" y="242" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="7" fill="#aaa" transform="rotate(-90,594,242)">K-12</text>
+
+              <!-- Horizontal "0 dBFS" clip line -->
+              <line x1="512" y1="67" x2="608" y2="67" stroke="#ef5350" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="608" y="64" text-anchor="start" font-family="Sarabun,sans-serif" font-size="7" fill="#ef5350">0 dBFS</text>
+
+              <text x="560" y="258" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#e8a838">K-20: Film/Classical</text>
+              <text x="560" y="269" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#e8a838">K-14: Music Albums ★</text>
+              <text x="560" y="280" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="8" fill="#aaa">K-12: TV/Broadcast</text>
+              <text x="560" y="296" text-anchor="middle" font-family="Sarabun,sans-serif" font-size="9" fill="#e8a838" font-weight="700">ใช้ mastering / QC</text>
+            </svg>
+            <figcaption class="comp-caption">3 ระบบ meter ที่ใช้ในงาน audio — dBFS วัด peak ป้องกัน clip / LUFS วัด loudness สำหรับ streaming / K-System กำหนด headroom ตาม use case</figcaption>
+          </figure>
+
+          <p><strong>dBFS (Digital Full Scale)</strong> วัด peak instantaneous ทุก sample — ใช้ระหว่างบันทึกเสียงและ mix เพื่อป้องกัน digital clipping ที่ 0 dBFS ซึ่งเป็น hard limit ของระบบ digital ทุกระบบ</p>
+
+          <p><strong>LUFS (Loudness Units Full Scale)</strong> หรือ LKFS วัดความดังแบบ integrated ที่คำนึงถึง K-weighting filter (ที่คล้ายกับ response ของหู) Streaming platform ทุกเจ้าใช้ค่านี้ตรวจสอบและ normalize เพลงที่ upload — Spotify และ YouTube ที่ −14 LUFS integrated, Apple Music ที่ −16, Broadcast ตาม EBU R128 ที่ −23 LUFS ถ้า master เพลงดัง −8 LUFS แล้ว upload ขึ้น Spotify เพลงจะถูก turn down อัตโนมัติ ผลลัพธ์ที่ได้ไม่ต่างจากที่ master ที่ −14 LUFS ไว้ดีๆ แต่เสียเวลาและ dynamic ไปโดยใช่เหตุ</p>
+
+          <p><strong>K-System</strong> พัฒนาโดย Bob Katz mastering engineer ชื่อดัง เป็นระบบที่กำหนด headroom ตาม use case แทนที่จะให้ "0" หมายถึง clip ทุกครั้ง K-20 เหมาะกับ film และ classical music ที่ต้องการ headroom สูง, K-14 สำหรับ pop/rock album (แนะนำมากที่สุดสำหรับ music production), K-12 สำหรับ broadcast ตัวเลข 0 ใน K-System หมายถึงระดับ average ที่ควรเป็น ไม่ใช่ ceiling ทำให้อ่านค่าสัมพันธ์กับ headroom ได้ชัดกว่า</p>
+
+          <p>Gain staging ไม่ใช่เรื่องที่ต้องเครียดหรือจำตัวเลขทุกอย่างแม่นยำ แค่เริ่มตระหนักว่าทุกจุดใน signal chain มีผลต่อสิ่งที่ตามมา ถ้าสัญญาณเข้า plugin ดี plugin ก็จะทำงานตามที่ออกแบบมา ถ้าสัญญาณเข้า master bus ดี mastering ก็จะง่ายขึ้นมาก และถ้าใช้ LUFS meter ตรวจสอบก่อน export ก็ไม่ต้องแปลกใจว่าทำไมเพลงถึงฟังดูเบากว่าคนอื่นบน streaming</p>
+
+        </div>
+
+        <footer class="post-footer">
+          <div class="post-tags">
+            <span class="post-tags-label">หมวดหมู่:</span>
+            <a href="#" class="tag tag-orange">เทคนิค</a>
+          </div>
+          <a href="../index.html" class="back-link">← กลับหน้าแรก</a>
+        </footer>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size:1.4rem;">
+          <span class="logo-main">STUDIO</span><span class="logo-accent">NEWS</span>
+        </div>
+        <p>แหล่งรวมความรู้ด้านดนตรี การบันทึกเสียง โปรดักชั่น และเทคโนโลยี อันดับ 1 ของประเทศไทย</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">เนื้อหา</div>
+        <a href="#">รีวิว</a><a href="#">เทคนิค</a><a href="#">สัมภาษณ์</a><a href="#">ข่าวสาร</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">นิตยสาร</div>
+        <a href="#">สมัครสมาชิก</a><a href="#">ฉบับดิจิทัล</a><a href="#">คลังบทความ</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">บริษัท</div>
+        <a href="#">เกี่ยวกับเรา</a><a href="#">ติดต่อเรา</a><a href="#">ลงโฆษณา</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© 2569 StudioNews Thailand. สงวนลิขสิทธิ์</div>
+    </div>
+  </footer>
+
+</body>
+</html>

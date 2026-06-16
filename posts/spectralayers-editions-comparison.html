@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เทียบ SpectraLayers ทุกเวอร์ชัน — Go, Elements, Pro ต่างกันยังไง — StudioNews Thailand</title>
+  <meta name="description" content="เทียบความต่างระหว่าง SpectraLayers Go, Elements และ Pro ของ Steinberg ทั้ง Unmix, Sample Rate, Channel, Undo Levels และ Batch Processing เพื่อให้เลือกเวอร์ชันที่เหมาะกับงานคุณ" />
+  <meta name="keywords" content="SpectraLayers, Steinberg, SpectraLayers Pro, SpectraLayers Elements, SpectraLayers Go, spectral editor, unmix, stem separation, audio restoration" />
+  <meta name="author" content="กองบรรณาธิการ" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://studionews.th/posts/spectralayers-editions-comparison" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="th_TH" />
+  <meta property="og:site_name" content="StudioNews Thailand" />
+  <meta property="og:title" content="เทียบ SpectraLayers ทุกเวอร์ชัน — Go, Elements, Pro ต่างกันยังไง" />
+  <meta property="og:description" content="Go ฟรีมาคู่ Pro Tools, Elements เริ่มต้นได้ในงบจำกัด, Pro ครบทุกฟีเจอร์ unmix และ restoration ระดับมืออาชีพ — เลือกให้ตรงกับงานของคุณ" />
+  <meta property="og:image" content="https://studionews.th/images/posts/spectralayers-editions-hero.jpg" />
+  <meta property="og:url" content="https://studionews.th/posts/spectralayers-editions-comparison" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="เทียบ SpectraLayers ทุกเวอร์ชัน — Go, Elements, Pro ต่างกันยังไง" />
+  <meta name="twitter:description" content="Go ฟรีมาคู่ Pro Tools, Elements เริ่มต้นได้ในงบจำกัด, Pro ครบทุกฟีเจอร์ unmix และ restoration ระดับมืออาชีพ — เลือกให้ตรงกับงานของคุณ" />
+  <meta name="twitter:image" content="https://studionews.th/images/posts/spectralayers-editions-hero.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "เทียบ SpectraLayers ทุกเวอร์ชัน — Go, Elements, Pro ต่างกันยังไง",
+    "description": "เทียบความต่างระหว่าง SpectraLayers Go, Elements และ Pro ของ Steinberg ทั้ง Unmix, Sample Rate, Channel, Undo Levels และ Batch Processing",
+    "image": "https://studionews.th/images/posts/spectralayers-editions-hero.jpg",
+    "datePublished": "2026-06-16",
+    "dateModified": "2026-06-16",
+    "author": {"@type": "Organization", "name": "กองบรรณาธิการ StudioNews Thailand"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "StudioNews Thailand",
+      "logo": {"@type": "ImageObject", "url": "https://studionews.th/logo.png"}
+    },
+    "inLanguage": "th",
+    "articleSection": "รีวิว",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studionews.th/posts/spectralayers-editions-comparison"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../post.css" />
+
+  <style>
+    .review-spec-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 14px; font-family: 'Sarabun', sans-serif; border-radius: 6px; overflow: hidden; border: 1px solid #e0ddd8; }
+    .review-spec-table th { background: #1a3060; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .review-spec-table td { padding: 10px 14px; border-bottom: 1px solid #e0ddd8; color: #333; vertical-align: top; }
+    .review-spec-table tr:last-child td { border-bottom: none; }
+    .review-spec-table tr:nth-child(even) td { background: #f9f8f6; }
+    .review-spec-table td:first-child { font-weight: 600; color: #555; width: 35%; }
+
+    .review-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.5rem 0 2rem; }
+    .review-pros, .review-cons { background: #f9f8f6; border-radius: 6px; padding: 18px 20px; border: 1px solid #e0ddd8; }
+    .review-pros h4 { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #27ae60; margin: 0 0 12px; }
+    .review-cons h4 { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #c0392b; margin: 0 0 12px; }
+    .review-pros ul, .review-cons ul { margin: 0; padding: 0; list-style: none; }
+    .review-pros li, .review-cons li { font-size: 14px; color: #444; padding: 3px 0; line-height: 1.5; }
+    .review-pros li::before { content: "+ "; color: #27ae60; font-weight: 700; }
+    .review-cons li::before { content: "− "; color: #c0392b; font-weight: 700; }
+
+    .review-verdict { background: #fff8f7; border-left: 4px solid #c0392b; border-radius: 0 6px 6px 0; padding: 20px 24px; margin: 2rem 0; }
+    .review-verdict-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #c0392b; margin-bottom: 10px; }
+    .review-verdict p { font-size: 16px !important; color: #333 !important; margin: 0 !important; line-height: 1.75 !important; }
+
+    .review-highlight { background: #f4f4f2; border-left: 4px solid #1a3060; border-radius: 0 6px 6px 0; padding: 16px 20px; margin: 1.5rem 0; }
+    .review-highlight p { font-size: 15px !important; color: #444 !important; margin: 0 !important; }
+
+    .post-body ul { margin: 0 0 1.6rem 1.4rem; }
+    .post-body ul li { font-size: 17px; color: #333; line-height: 1.75; margin-bottom: 6px; font-family: 'Sarabun', sans-serif; }
+
+    @media (max-width: 600px) {
+      .review-pros-cons { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar" role="banner">
+    <div class="container top-bar-inner">
+      <span>แหล่งรวมความรู้ดนตรีและโปรดักชั่นอันดับ 1 ของไทย</span>
+      <div class="top-bar-links">
+        <a href="#">สมัครสมาชิก</a>
+        <a href="#">จดหมายข่าว</a>
+        <a href="#">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="StudioNews Thailand">
+        <span class="logo-main">STUDIO</span><span class="logo-accent">NEWS</span>
+        <span class="logo-th">ไทยแลนด์</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="เมนูหลัก">
+        <a href="#">รีวิว</a>
+        <a href="#">เทคนิค</a>
+        <a href="#">บุคคล</a>
+        <a href="#">ฟอรัม</a>
+        <a href="#">เกียร์</a>
+        <a href="#">ข่าว</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post-main" id="main-content" role="main">
+    <div class="container post-container">
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="../index.html">หน้าแรก</a>
+        <span>›</span>
+        <a href="#">รีวิว</a>
+        <span>›</span>
+        <span>SpectraLayers</span>
+      </nav>
+
+      <article class="post-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <header class="post-header">
+          <span class="tag tag-orange">รีวิว</span>
+          <h1 itemprop="headline">เทียบ SpectraLayers ทุกเวอร์ชัน — Go, Elements, Pro ต่างกันยังไง</h1>
+          <div class="post-meta">
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+              โดย <span itemprop="name">กองบรรณาธิการ</span>
+            </span>
+            <span class="dot">·</span>
+            <time itemprop="datePublished" datetime="2026-06-16">16 มิ.ย. 2569</time>
+            <span class="dot">·</span>
+            <span>9 นาทีในการอ่าน</span>
+          </div>
+          <img src="https://ocl-steinberg-live.steinberg.net/_storage/asset/164140/storage/PNG_medium_1000px/164140-medium.png"
+               alt="Steinberg SpectraLayers Pro Packshot"
+               class="post-hero-img"
+               itemprop="image"
+               loading="eager" />
+        </header>
+
+        <div class="post-body" itemprop="articleBody">
+
+          <p>SpectraLayers คือ spectral audio editor ของ Steinberg ที่ใช้กันแพร่หลายในงาน restoration, sound design และ unmix/stem separation ปัญหาที่หลายคนเจอตอนจะซื้อคือมันมีหลายเวอร์ชันที่หน้าตาคล้ายกันมาก — Go, Elements และ Pro — แต่ราคาและฟีเจอร์ต่างกันค่อนข้างมาก บทความนี้สรุปความต่างที่สำคัญที่สุด เพื่อให้เลือกเวอร์ชันที่เหมาะกับงบและงานของคุณได้ง่ายขึ้น</p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:2rem 0;">
+            <figure style="margin:0;">
+              <img src="https://ocl-steinberg-live.steinberg.net/_storage/asset/164140/storage/PNG_medium_1000px/164140-medium.png"
+                   alt="Steinberg SpectraLayers Pro Packshot"
+                   style="width:100%; border-radius:6px; display:block;"
+                   loading="lazy" />
+              <figcaption style="font-size:12px; color:#888; margin-top:6px; text-align:center;">SpectraLayers Pro</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="https://ocl-steinberg-live.steinberg.net/_storage/asset/164142/storage/PNG_medium_1000px/164142-medium.png"
+                   alt="Steinberg SpectraLayers Elements Packshot"
+                   style="width:100%; border-radius:6px; display:block;"
+                   loading="lazy" />
+              <figcaption style="font-size:12px; color:#888; margin-top:6px; text-align:center;">SpectraLayers Elements</figcaption>
+            </figure>
+          </div>
+          <p style="font-size:12px; color:#888; margin-top:-1.5rem; text-align:right;">
+            ภาพจาก <a href="https://www.steinberg.net/spectralayers/" target="_blank" rel="noopener noreferrer">Steinberg</a>
+          </p>
+
+          <p><strong>ดูตารางเปรียบเทียบเต็มจากเว็บ Steinberg:</strong> <a href="https://www.steinberg.net/spectralayers/compare-editions/" target="_blank" rel="noopener noreferrer">steinberg.net/spectralayers/compare-editions</a></p>
+
+          <h2>3 เวอร์ชันที่มีในตลาดตอนนี้</h2>
+
+          <ul>
+            <li><strong>SpectraLayers Go</strong> — เวอร์ชันฟรีที่แถมมากับ Pro Tools subscription มีฟีเจอร์หลักคือ Unmix Song (แยกเสียงร้องกับเครื่องดนตรีอื่นออกจากกัน) เหมาะสำหรับลองใช้งานพื้นฐานโดยไม่ต้องซื้อเพิ่ม</li>
+            <li><strong>SpectraLayers Elements</strong> — เวอร์ชันเริ่มต้นราคา 89.99 ดอลลาร์ ตัดฟีเจอร์ขั้นสูงออกหลายอย่างเพื่อให้ราคาเข้าถึงได้ง่าย</li>
+            <li><strong>SpectraLayers Pro</strong> — เวอร์ชันเต็มราคา 349.99 ดอลลาร์ ที่มีทุกฟีเจอร์ unmix, restoration และ editing tools ระดับมืออาชีพ</li>
+          </ul>
+
+          <h2>Sample Rate, Channel และ Undo — ความต่างพื้นฐาน</h2>
+
+          <p>จุดแรกที่ต่างชัดเจนระหว่าง Elements กับ Pro คือขีดจำกัดพื้นฐานของไฟล์ที่ทำงานได้:</p>
+
+          <table class="review-spec-table">
+            <thead>
+              <tr><th>หัวข้อ</th><th>Elements</th><th>Pro</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Maximum Sample Rate</td><td>96 kHz</td><td>384 kHz</td></tr>
+              <tr><td>Maximum Number of Channels</td><td>2 (stereo)</td><td>16</td></tr>
+              <tr><td>Maximum Undo Levels</td><td>8</td><td>64</td></tr>
+              <tr><td>Maximum Number of Layers</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Batch Processing</td><td>ไม่มี</td><td>มี</td></tr>
+            </tbody>
+          </table>
+
+          <p>Elements จำกัดอยู่ที่ไฟล์ stereo เท่านั้น ทำให้ใช้กับงาน surround หรือ multichannel ไม่ได้เลย ส่วน Pro รองรับสูงสุด 16 channels และ sample rate สูงถึง 384 kHz ครอบคลุมงาน hi-res และ archival restoration ได้เต็มรูปแบบ</p>
+
+          <h2>Unmix — จุดต่างที่ชัดเจนที่สุด</h2>
+
+          <div class="review-highlight">
+            <p><strong>นี่คือจุดที่งบประมาณส่งผลมากที่สุด:</strong> Elements มี Unmix Song พื้นฐาน (แยกเสียงร้องออกจากเพลง) เท่านั้น ขณะที่ Pro มี Unmix Modules ครบทุกแบบ — Unmix Instrument, Unmix Chorus, Unmix Crowd Noise, Unmix Mid/Side และ Unmix Soundtrack ทำให้แยกเสียงเครื่องดนตรีแต่ละชิ้น, เสียงประสาน หรือเสียงพื้นหลังในงาน production ได้ละเอียดกว่ามาก</p>
+          </div>
+
+          <h2>Restoration และ Match Tools</h2>
+
+          <p>ฟีเจอร์ restoration ขั้นสูงอย่าง Reverb Reduction, DePlosive, Voice DeClip และ Voice DeNoise มีให้ใช้เฉพาะใน Pro เท่านั้น เช่นเดียวกับ Match tools อย่าง Ambience Match, EQ Match และ Reverb Match ที่ช่วยจับสีเสียงจาก reference แล้วนำไปปรับ source เสียงอื่นให้เข้ากัน — งานเหล่านี้ Elements ทำไม่ได้เลย</p>
+
+          <h2>Selection Tools — ละเอียดกว่าใน Pro</h2>
+
+          <p>เครื่องมือเลือกพื้นที่สัญญาณของ Pro มีความละเอียดมากกว่า Elements ชัดเจน โดยเฉพาะ Frequency/Harmonics Selection, Transient Selection และ Select Harmonics ที่ Elements ไม่มี ทำให้งาน sound design หรือ forensic audio ที่ต้องเลือกเฉพาะ harmonic หรือ transient บางจุดทำได้เฉพาะใน Pro</p>
+
+          <h2>Plugin Formats และการใช้งานใน DAW</h2>
+
+          <p>ทั้ง Elements และ Pro ใช้งานได้ทั้งแบบ standalone application และเป็น ARA2/AAX plugin ใน DAW เช่น Cubase, Nuendo หรือ Pro Tools ทำให้ edit แบบ non-destructive ได้โดยตรงในไทม์ไลน์ของ DAW โดยไม่ต้อง export/import ไฟล์ไปมา</p>
+
+          <h2>สรุปตารางเปรียบเทียบ</h2>
+
+          <table class="review-spec-table">
+            <tbody>
+              <tr><td>ราคา</td><td>Go: ฟรี (มากับ Pro Tools) / Elements: $89.99 / Pro: $349.99</td></tr>
+              <tr><td>Unmix</td><td>Go &amp; Elements: Vocals/Song เท่านั้น / Pro: ครบทุกโมดูล</td></tr>
+              <tr><td>Sample Rate สูงสุด</td><td>Elements: 96 kHz / Pro: 384 kHz</td></tr>
+              <tr><td>Channel สูงสุด</td><td>Elements: 2 (stereo) / Pro: 16</td></tr>
+              <tr><td>Undo Levels</td><td>Elements: 8 / Pro: 64</td></tr>
+              <tr><td>Batch Processing</td><td>Elements: ไม่มี / Pro: มี</td></tr>
+              <tr><td>Restoration ขั้นสูง</td><td>Elements: ไม่มี / Pro: มี (Reverb Reduction, DePlosive, Voice DeClip/DeNoise)</td></tr>
+              <tr><td>Match Tools</td><td>Elements: ไม่มี / Pro: มี (Ambience/EQ/Reverb Match)</td></tr>
+              <tr><td>Plugin Format</td><td>ทั้งสองเวอร์ชัน: Standalone + ARA2/AAX</td></tr>
+            </tbody>
+          </table>
+
+          <div class="review-pros-cons">
+            <div class="review-pros">
+              <h4>เลือก Elements ถ้า...</h4>
+              <ul>
+                <li>งบจำกัด ต้องการแค่ edit สัญญาณ stereo พื้นฐาน</li>
+                <li>ต้องการแค่ลบ noise หรือ unmix เสียงร้องออกจากเพลง</li>
+                <li>ไม่ต้องทำงาน batch หรือไฟล์ multichannel</li>
+              </ul>
+            </div>
+            <div class="review-cons">
+              <h4>เลือก Pro ถ้า...</h4>
+              <ul>
+                <li>ทำงาน restoration หรือ forensic audio ระดับมืออาชีพ</li>
+                <li>ต้องการ unmix เครื่องดนตรีแต่ละชิ้นแยกกัน ไม่ใช่แค่เสียงร้อง</li>
+                <li>ทำงานกับไฟล์ multichannel หรือ sample rate สูงกว่า 96 kHz</li>
+                <li>ต้องการ batch process ไฟล์จำนวนมากพร้อมกัน</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="review-verdict">
+            <div class="review-verdict-label">สรุป</div>
+            <p>ถ้าคุณแค่อยากลองสายงาน spectral editing เป็นครั้งแรก SpectraLayers Go ที่แถมมากับ Pro Tools คือจุดเริ่มต้นที่ดีที่สุดเพราะไม่มีค่าใช้จ่ายเพิ่ม Elements เหมาะกับคนที่ต้องการเครื่องมือพื้นฐานในราคาที่เข้าถึงได้ แต่สำหรับ engineer ที่ทำงาน restoration, forensic audio หรือ unmix แบบมืออาชีพเป็นประจำ ความต่างด้าน Unmix Modules, Match Tools และ channel/sample rate ที่สูงกว่าทำให้ SpectraLayers Pro คุ้มค่ากับราคาที่สูงกว่าอย่างชัดเจน</p>
+          </div>
+
+          <p style="font-size:14px; color:#1a3060; font-weight:600; margin-top:1.5rem;">#RME #Ctmusic #Proplugin #Bludedotrecords #gkrgroup</p>
+
+        </div>
+
+        <footer class="post-footer">
+          <div class="post-tags">
+            <span class="post-tags-label">หมวดหมู่:</span>
+            <a href="#" class="tag tag-orange">รีวิว</a>
+          </div>
+          <a href="../index.html" class="back-link">← กลับหน้าแรก</a>
+        </footer>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size:1.4rem;">
+          <span class="logo-main">STUDIO</span><span class="logo-accent">NEWS</span>
+        </div>
+        <p>แหล่งรวมความรู้ด้านดนตรี การบันทึกเสียง โปรดักชั่น และเทคโนโลยี อันดับ 1 ของประเทศไทย</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">เนื้อหา</div>
+        <a href="#">รีวิว</a><a href="#">เทคนิค</a><a href="#">สัมภาษณ์</a><a href="#">ข่าวสาร</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">นิตยสาร</div>
+        <a href="#">สมัครสมาชิก</a><a href="#">ฉบับดิจิทัล</a><a href="#">คลังบทความ</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">บริษัท</div>
+        <a href="#">เกี่ยวกับเรา</a><a href="#">ติดต่อเรา</a><a href="#">ลงโฆษณา</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© 2569 StudioNews Thailand. สงวนลิขสิทธิ์</div>
+    </div>
+  </footer>
+
+</body>
+</html>
