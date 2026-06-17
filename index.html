@@ -116,12 +116,11 @@
   <!-- Category Tabs -->
   <div class="category-bar" role="navigation" aria-label="หมวดหมู่">
     <div class="container category-inner">
-      <button class="cat-btn active" aria-pressed="true">ทั้งหมด</button>
-      <button class="cat-btn" aria-pressed="false">รีวิว</button>
-      <button class="cat-btn" aria-pressed="false">บทเรียน</button>
-      <button class="cat-btn" aria-pressed="false">ข่าว</button>
-      <button class="cat-btn" aria-pressed="false">สัมภาษณ์</button>
-      <button class="cat-btn" aria-pressed="false">เกียร์</button>
+      <button class="cat-btn active" data-filter="ทั้งหมด" aria-pressed="true">🗂 ทั้งหมด</button>
+      <button class="cat-btn" data-filter="เทคนิค" aria-pressed="false">🎛 เทคนิค</button>
+      <button class="cat-btn" data-filter="เกียร์" aria-pressed="false">🎙 เกียร์</button>
+      <button class="cat-btn" data-filter="ข่าว" aria-pressed="false">📰 ข่าว</button>
+      <button class="cat-btn" data-filter="รีวิว" aria-pressed="false">⭐ รีวิว</button>
     </div>
   </div>
 
@@ -134,7 +133,7 @@
 
         <div class="feed-section-label">บทความล่าสุด</div>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/mixer_fader_pre_post.svg"
                  alt="Mixer Channel Strip แสดงปุ่ม Pre และ Post Fader Send"
@@ -155,7 +154,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/female_vocal.png"
                  alt="Polar Pattern ของ Condenser Mic"
@@ -176,7 +175,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="ข่าว" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/vst-plugin-news-2026-thumb.jpg"
                  alt="VST Plugin ใหม่น่าจับตา 2026"
@@ -197,7 +196,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/headphonemixing.png"
                  alt="Mix บนหูฟังยังไงให้ได้ผลดี"
@@ -217,7 +216,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/parallel-compression-thumb.jpg"
                  alt="Parallel Compression เทคนิคทำกลองให้หนักขึ้น"
@@ -238,7 +237,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/gainstage.png"
                  alt="Gain Staging การตั้งระดับสัญญาณตั้งแต่ต้น"
@@ -258,7 +257,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/guitar_AB.png"
                  alt="การวาง Stereo Microphone 6 แบบสำหรับบันทึกเสียง"
@@ -278,7 +277,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เทคนิค" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/Fireface-UCX-II.png"
                  alt="อินเตอร์เฟซ RME และการใช้งาน TotalMix FX"
@@ -298,7 +297,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://rme-audio.de/images/products/m-1620-pro-d.jpg"
                  alt="RME M-1620 Pro D 1U Rack Converter"
@@ -319,7 +318,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="images/posts/Fireface-UCX-II.png"
                  alt="RME Fireface UCX II USB Audio Interface"
@@ -339,7 +338,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://www.rme-usa.com/files/uploads/Content-Bilder/UFX-Web01.jpg"
                  alt="RME UFX III Professional USB Audio Interface"
@@ -359,7 +358,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://www.rme-usa.com/files/uploads/RME-Products/External/Fireface-802-FS.png"
                  alt="RME Fireface 802 FS Rack Mount Audio Interface"
@@ -379,7 +378,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://www.rme-usa.com/files/uploads/RME-Products/External/Babyface-Pro-FS.png"
                  alt="RME Babyface Pro FS USB Audio Interface"
@@ -399,7 +398,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://www.rme-usa.com/files/uploads/RME-Products/External/Digiface-Dante.png"
                  alt="RME Digiface Dante USB Audio Interface"
@@ -419,7 +418,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://www.rme-usa.com/files/uploads/RME-Products/PCI-e/HDSPe-AoX.png"
                  alt="RME HDSPe AoX-D PCIe Audio Card"
@@ -439,7 +438,7 @@
           </div>
         </article>
 
-        <article class="feed-article" itemscope itemtype="https://schema.org/NewsArticle">
+        <article class="feed-article" data-category="เกียร์" itemscope itemtype="https://schema.org/NewsArticle">
           <div class="feed-img">
             <img src="https://ocl-steinberg-live.steinberg.net/_storage/asset/164140/storage/PNG_medium_1000px/164140-medium.png"
                  alt="Steinberg SpectraLayers Pro Packshot"
@@ -554,6 +553,42 @@
       });
     });
   </script>
+
+<script>
+  (function () {
+    const buttons = document.querySelectorAll('.cat-btn[data-filter]');
+    const articles = document.querySelectorAll('.feed-article[data-category]');
+    const feed = document.querySelector('.article-feed');
+
+    // No-result message element
+    const noResult = document.createElement('p');
+    noResult.id = 'no-result-msg';
+    noResult.style.cssText = 'display:none;padding:32px 0;color:#888;font-family:Sarabun,sans-serif;font-size:16px;text-align:center;';
+    noResult.textContent = 'ไม่พบบทความในหมวดหมู่นี้';
+    feed.appendChild(noResult);
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const filter = this.dataset.filter;
+
+        // Update active state
+        buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+        this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
+
+        // Filter articles
+        let visible = 0;
+        articles.forEach(article => {
+          const match = filter === 'ทั้งหมด' || article.dataset.category === filter;
+          article.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+
+        noResult.style.display = visible === 0 ? 'block' : 'none';
+      });
+    });
+  })();
+</script>
 
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
