@@ -190,6 +190,22 @@
             <li>ลดเวลา post-production ได้อย่างเห็นได้ชัดโดยเฉพาะงานที่มีหลาย camera หรือหลาย interview subject</li>
           </ul>
 
+          <h2>Deity TC-1 — Timecode Generator ที่ใช้คู่กัน</h2>
+
+          <p>นอกจาก timecode ที่ Wireless PRO มีในตัว ในบาง workflow ผมยังใช้ <strong>Deity TC-1</strong> เข้ามาเสริมด้วย TC-1 เป็น timecode generator ขนาดเล็กน้ำหนักแค่ 41 กรัม ที่ช่วยให้ทำงานได้สองแบบ:</p>
+
+          <ul>
+            <li><strong>Jam กับ Wireless PRO:</strong> ใช้ TC-1 เป็น master timecode แล้ว jam ไปหา Wireless PRO receiver และอุปกรณ์อื่นในชุด ทุกอย่างล็อก frame rate เดียวกันทั้งหมด เหมาะสำหรับงานที่มีหลาย camera หรือหลาย wireless unit พร้อมกัน</li>
+            <li><strong>ติดตั้งบน Sony FX3 โดยตรง:</strong> เสียบ TC-1 เข้ากับ 3.5mm timecode port ของกล้องผ่าน locking TRS connector วิธีนี้ทำให้กล้องรับ timecode ตรงๆ แม้ไม่ได้ใช้ Wireless PRO ในฉากนั้น</li>
+          </ul>
+
+          <p>ผลคือ ไม่ว่าจะถ่ายด้วย setup แบบไหน เสียงและภาพก็มี timecode ตรงกันทุก frame เปิด DaVinci Resolve แล้ว sync ได้เลยโดยไม่ต้องนั่ง match waveform ด้วยมือหรือตีกระดาน Accuracy ของ TC-1 อยู่ที่ ±0.5 ppm ซึ่ง drift น้อยกว่า 1 frame ตลอด 72 ชั่วโมง และแบตอยู่ได้ถึง 28 ชั่วโมงต่อการชาร์จหนึ่งครั้ง</p>
+
+          <div class="field-note">
+            <div class="field-note-label">Workflow จริง</div>
+            งาน concert ที่มีทีมงานหลายคน — ใช้ TC-1 เป็น master jam ไปหา Wireless PRO ทุกตัวก่อนเริ่มงาน จากนั้นแขวน TC-1 ไว้กับกล้องตลอด session ทุก transmitter วิ่งอิสระโดยไม่ต้องต่อสายเพิ่ม แต่ timecode ล็อกกันครบทุกตัว ตอน edit เปิด resolve แล้ว sync ได้ใน 1 คลิก
+          </div>
+
           <h2>ระบบ Wireless — ส่งสัญญาณได้ 260 เมตร</h2>
 
           <p>Wireless PRO ใช้ Series IV 2.4GHz พร้อม 128-bit encryption ส่งสัญญาณได้ไกลถึง 260 เมตร ในสภาพแวดล้อมจริงอย่างใน venue คอนเสิร์ตที่มีผนัง คน และ equipment เยอะ ระยะจริงอาจสั้นกว่า แต่ในงานจริงที่ใช้ยังไม่เคยเจอสัญญาณหลุดในระยะที่ถ่ายงานปกติ</p>
